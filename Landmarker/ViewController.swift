@@ -273,6 +273,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate , UIImage
     }.joined(separator: ",")
     
     func searchLandmarkByCoordinate(latitude : Double, longitude: Double){
+        // https://www.chiikinogennki.soumu.go.jp/k-cloud-api/search/develop/ResultList.action
         // req_url = "https://<ホスト名>/k-cloud-api/<バージョン>/kanko/<ジャンル>/<出 力データ形式>?<パラメータ群>"
         guard let req_url = URL(string: "https://www.chiikinogennki.soumu.go.jp/k-cloud-api/v001/kanko/\(genres)/json?limit=20&coordinates=\(latitude),\(longitude)") else {
             return

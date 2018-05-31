@@ -95,35 +95,41 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yef-Q8-aK4">
-                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                                <rect key="frame" x="16" y="323" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLZ-QY-bH9">
-                                <rect key="frame" x="16" y="352" width="343" height="307"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XkC-s0-7pS">
+                                <rect key="frame" x="16" y="352" width="343" height="295"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H0g-Bd-Px6">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="295"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Vxm-1v-8U7" firstAttribute="trailing" secondItem="yef-Q8-aK4" secondAttribute="trailing" constant="16" id="0xt-gm-FHh"/>
-                            <constraint firstItem="Vxm-1v-8U7" firstAttribute="trailing" secondItem="fLZ-QY-bH9" secondAttribute="trailing" constant="16" id="GCs-pg-hux"/>
-                            <constraint firstItem="fLZ-QY-bH9" firstAttribute="top" secondItem="yef-Q8-aK4" secondAttribute="bottom" constant="8" id="H8J-Kh-yuC"/>
+                            <constraint firstItem="Vxm-1v-8U7" firstAttribute="bottom" secondItem="XkC-s0-7pS" secondAttribute="bottom" constant="20" id="81a-QI-LDY"/>
                             <constraint firstItem="yef-Q8-aK4" firstAttribute="top" secondItem="6U8-uE-T8L" secondAttribute="bottom" constant="8" symbolic="YES" id="JrI-co-q4D"/>
                             <constraint firstItem="6U8-uE-T8L" firstAttribute="leading" secondItem="yef-Q8-aK4" secondAttribute="leading" id="Kll-m4-7Qb"/>
-                            <constraint firstItem="Vxm-1v-8U7" firstAttribute="bottom" secondItem="fLZ-QY-bH9" secondAttribute="bottom" constant="8" id="Qxb-Qh-zbr"/>
                             <constraint firstItem="6U8-uE-T8L" firstAttribute="top" secondItem="Vxm-1v-8U7" secondAttribute="top" constant="8" id="SRG-JU-BsB"/>
-                            <constraint firstItem="fLZ-QY-bH9" firstAttribute="leading" secondItem="Vxm-1v-8U7" secondAttribute="leading" constant="16" id="bz5-PW-cG8"/>
                             <constraint firstItem="6U8-uE-T8L" firstAttribute="trailing" secondItem="yef-Q8-aK4" secondAttribute="trailing" id="fSJ-id-ypg"/>
                             <constraint firstItem="yef-Q8-aK4" firstAttribute="leading" secondItem="Vxm-1v-8U7" secondAttribute="leading" constant="16" id="fpE-vp-Jo7"/>
+                            <constraint firstItem="XkC-s0-7pS" firstAttribute="leading" secondItem="Vxm-1v-8U7" secondAttribute="leading" constant="16" id="hTI-xm-P9h"/>
+                            <constraint firstItem="Vxm-1v-8U7" firstAttribute="trailing" secondItem="XkC-s0-7pS" secondAttribute="trailing" constant="16" id="lWn-Mc-FBO"/>
+                            <constraint firstItem="XkC-s0-7pS" firstAttribute="top" secondItem="yef-Q8-aK4" secondAttribute="bottom" constant="8.5" id="yXn-su-DYg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vxm-1v-8U7"/>
                     </view>
                     <connections>
-                        <outlet property="documentLabel" destination="fLZ-QY-bH9" id="e0y-gj-qj7"/>
+                        <outlet property="documentView" destination="H0g-Bd-Px6" id="iqc-cp-9xf"/>
                         <outlet property="targetImage" destination="6U8-uE-T8L" id="bAy-rJ-WC9"/>
                         <outlet property="titleLabel" destination="yef-Q8-aK4" id="oCn-Lg-q7T"/>
                     </connections>
