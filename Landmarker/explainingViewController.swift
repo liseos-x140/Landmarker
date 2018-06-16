@@ -119,7 +119,7 @@ class explainingViewController: UIViewController {
                 MultipartFormData.append("landmark".data(using: .utf8)!, withName: "modelName")
                 
         },
-            to: "https://api.apigw.smt.docomo.ne.jp/imageRecognition/v1/concept/classify/?APIKEY=6d667135466d7a414c2e6c477458724d5353764d61315170584647726d6647757639416854427639527a42",
+            to: "https://api.apigw.smt.docomo.ne.jp/imageRecognition/v1/concept/classify/?APIKEY=xxxx",
             //method: .POST,
             headers: headers,
             encodingCompletion: { encodingResult in
